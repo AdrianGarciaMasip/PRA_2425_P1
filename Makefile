@@ -1,5 +1,6 @@
 clean:
-        rm -f *.o bin/testDrawing
+	rm -f *.o nombre_programa
+	rm -rf directorio_temporal
 
 Point2D.o: Point2D.h Point2D.cpp
 	g++ -c Point2D.cpp
