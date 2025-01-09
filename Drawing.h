@@ -10,13 +10,10 @@ private:
     List<Shape*>* shapes; // Lista de figuras representadas en el dibujo
 
 public:
-    // Constructor
     Drawing();
 
-    // Destructor
     ~Drawing();
 
-    // Métodos
     void add_front(Shape* shape);           // Añade una figura al frente
     void add_back(Shape* shape);            // Añade una figura al fondo
     void print_all();                       // Imprime información de todas las figuras
@@ -24,5 +21,4 @@ public:
     void move_squares(double incX, double incY); // Mueve todos los cuadrados
 };
 
-#endif // DRAWING_H
-
+#endif

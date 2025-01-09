@@ -15,5 +15,5 @@ public:
     virtual ~List() = default;
 };
 
-#endif // LIST_H
+#endif
 
