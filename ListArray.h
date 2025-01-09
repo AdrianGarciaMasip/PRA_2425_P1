@@ -9,9 +9,9 @@ class ListArray : public List<T> {
 private:
     T* arr;   // Puntero al array dinámico
     int max;  // Capacidad máxima del array
-    int n;    // Número de elementos actuales
+    int n;    // Número actual de elementos en la lista
 
-    // Método para redimensionar el array dinámico
+    // Método privado para redimensionar el array dinámico
     void resize(int new_size) {
         T* aux = new T[new_size];
         for (int i = 0; i < n; i++) {
@@ -36,7 +36,7 @@ public:
     // Implementaciones de las funciones virtuales puras
     void insert(int pos, T e) override {
         if (pos < 0 || pos > n) throw std::out_of_range("Posición inválida");
-        if (n == max) resize(max * 2);
+        if (full()) resize(max * 2);  // Redimensionar si está lleno
         for (int i = n; i > pos; i--) {
             arr[i] = arr[i - 1];
         }
